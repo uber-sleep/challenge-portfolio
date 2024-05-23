@@ -5,14 +5,17 @@ coloque nas sessões indicadas*/
 :root{
     /*Insira a variavel das outras cores inspecionando o modelo do figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+   --cor-de-fundo: #0A0A0A;
+   --cor-de-link: #fff;
+   --pink-hightlight: #FF79D1;
+   --green-hightlight: #2BAA9B;
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
+    color: #fff;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -23,6 +26,11 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+.all {
+    width: 70rem;
+    margin: auto;
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -41,26 +49,178 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sessão Menu*/
 
 section.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+section.menu header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+section.menu header img{
+    height: 24px;
+    width: 24px;
+}
+
+.menu__list {
+    display:flex;
+    gap: 2rem;
+}
+
+#contact {
+    font-weight: 900;
 }
 
 /*Sessão Title*/
 
 section.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
 
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+}
+
+.title__bio {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.title__subsection {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.title__network {
+    display: flex;
+    gap: 1rem;
+    font-size: 16px;
+    padding: 0;
+    font-weight: 500;
 }
 
 /*Sessão About*/
 
 section.about{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
 
+.about__container{
+    width: 46.938rem;
+}
+
+.about__title{
+    font-size: 2rem;
+}
+
+.about__paragraph {
+    font-size: 1rem;
+}
+
+/*Sessão Skills*/
+
+section.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:1.5rem;
+}
+
+.skills__title {
+    font-size: 2rem;
+}
+
+.skills__line {
+    display: flex;
+    gap: 1rem;
+}
+
+.skills__box {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 176px;
+    height: 174px;
+    background: #fff;
+}
+
+.skills__box ul {
+    display:flex;
+    padding-inline-start: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.skills__img {
+    align-self: flex-start;
+    border: 2px solid var(--pink-hightlight);
+    padding: 0.3rem;
+}
+
+.skills__name {
+    color: var(--pink-hightlight);
+    font-weight: 700;
 }
 
 /*Sessão Hobbies*/
 
 section.hobbies{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:1.5rem;
 }
+
+
+.hobbies__title {
+    font-size: 2rem;
+}
+
+.hobbies__line {
+    display: flex;
+    gap: 1rem;
+}
+
+.hobbies__box {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 176px;
+    height: 174px;
+    background: #fff;
+}
+
+.hobbies__box ul {
+    display:flex;
+    padding-inline-start: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hobbies__img {
+    align-self: flex-start;
+    border: 2px solid var(--green-hightlight);
+    padding: 0.3rem;
+}
+
+.hobbies__name {
+    color: var(--green-hightlight);
+    font-weight: 700;
+}
+
 
 /* Experiência Acadêmica*/
 

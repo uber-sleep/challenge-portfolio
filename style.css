@@ -690,3 +690,74 @@ utilize como referência os breakpoints @media abaixo*/
     }
 
 }
+
+/*Mobile*/
+@media (max-width: 425px) {
+    .all {
+        max-width: 344px;
+    }
+
+    /* Menu */
+    #contact {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    h3.menu__title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* Title */
+    div.title__div {
+        flex-direction: column;
+    }
+
+    /* Skills */
+    div.skills__line {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    div.skills__box {
+        width: 156px;
+        height: 118px;
+    }
+
+    /* Hobbies */
+    div.hobbies__line {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    div.hobbies__box {
+        width: 156px;
+        height: 118px;
+    }
+
+    /* Academic */
+    div.academic__courses {
+        flex-direction: column;
+    }
+
+    li.academic__courses__item__img {
+        width: 344px;
+    }
+    
+    /* Experiencia */
+
+    div.experiencie__box .experience__img {
+        width: 344px;
+        height: 168px;
+    }
+
+    div.experience__description button {
+        font-size: 14px;
+    }
+
+    /* Contato */
+    .formcontato__contacto {
+        max-width: 344px !important;
+    }
+
+}

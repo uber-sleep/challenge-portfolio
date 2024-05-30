@@ -23,6 +23,9 @@ body {
 }
 ol, ul,li {
     list-style: none;
+    margin-inline-start: initial;
+    margin-inline-end: initial;
+    padding-inline-start: initial;
 }
 a{
     text-decoration: none;
@@ -67,6 +70,11 @@ section.menu {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
+}
+
+h3.menu__title {
+    font-size: 16px;
 }
 
 section.menu header {
@@ -268,30 +276,20 @@ section.academic{
 
 h2.academic__title {
     font-size: 2rem;
-    margin-bottom: 2rem;
 }
 
 div.academic__courses {
     display: flex;
     gap: 1rem;
-    width: 100%;
 }
 
-div.academic__courses__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%; 
-    max-width: 368px;    
-    height: 347px;
+.academic__courses__box {
+    width: min-content;
 }
 
 ul.academic__courses__list  {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    width: 100%;
-    height: 100%
 }
 
 li.academic__courses__item__img {
@@ -299,8 +297,13 @@ li.academic__courses__item__img {
     justify-content: center;
     align-items: center;
     height: 286px;
-    width: 100%;
+    width: 368px;
     background: white;
+}
+
+li.academic__courses__item__img img {
+    height: 130px;
+    width: 190px;
 }
 
 li.academic__courses__item__title {
@@ -373,6 +376,10 @@ div.experience__description {
     gap: 1rem;
 }
 
+div.experience__description button {
+    font-size: 16px;
+}
+
 span.experience__repo {
     border: 1px solid var(--pink-hightlight);
     padding: 1rem;
@@ -402,12 +409,13 @@ span.experience__demo button {
 section.formcontato {
     display: flex;
     margin-top: 4rem;
+    align-items: center;
 }
 
 div.formcontato__contacto {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 div.formcontato__text {
@@ -433,6 +441,7 @@ h3.formcontato__subtext {
 }
 
 form.formcontato__form {
+    width: 100%;
     display: flex;
     flex-direction: column;   
     gap: 2rem;
@@ -490,218 +499,194 @@ utilize como referência os breakpoints @media abaixo*/
 /*Tablet*/
 @media (max-width: 768px) {
 
-/* menu */
-section.menu {
-    max-width: 768px;
-}
+    .all {
+        max-width: 704px;
+    }
 
-ul.menu__list {
-    display: none;
-}
+    /* Menu */
+    section.menu {
+        max-width: 768px;
+    }
 
-h2.title__bio {
-    font-size: 22px;
-}
+    section.menu header img{
+        height: 22px;
+        width: 22px;
+    }
 
-h3.title__subsection {
-    font-size: 16px;
-}
+    ul.menu__list {
+        display: none;
+    }
 
-/*title*/
-section.title{
-    width: 100%;
-    max-width: 768px;
-}
+    /*Title*/
+    section.title{
+        width: 100%;
+        max-width: 768px;
+    }
 
-section.title .title__profile {
-    width: 146px;
-    height: 146px;
-}
+    h2.title__bio {
+        font-size: 22px;
+    }
 
-/* about */
-section.about {
-    max-width: 768px
-}
+    h3.title__subsection {
+        font-size: 16px;
+    }
 
-div.about__container{
-    width: 100%;
-}
+    section.title .title__profile {
+        width: 146px;
+        height: 146px;
+    }
 
-h3.about__title{
-    font-size: 22px;
-}
+    /* About */
+    section.about {
+        max-width: 768px
+    }
 
-/*Skills*/
-section.skills {
-    align-items: flex-start;
-    width: 100%;
-    max-width: 768px;
-}
+    div.about__container{
+        width: 100%;
+    }
 
-h3.skills__title {
-    display: flex;
-    align-self: center;
-    font-size: 22px;
-}
+    h3.about__title{
+        font-size: 22px;
+    }
 
-div.skills__line {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 2rem;
-    column-gap: 2rem;
-}
+    /*Skills*/
+    section.skills {
+        width: 100%;
+        max-width: 768px;
+    }
 
-div.skills__box {
-    width: 224px;
-    height: 118px;
-}
+    h3.skills__title {
+        display: flex;
+        align-self: center;
+        font-size: 22px;
+    }
 
-/*Hobbies*/
+    div.skills__line {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
-section.hobbies {
-    align-items: flex-start;
-    width: 100%;
-    max-width: 768px;
-}
+    div.skills__box {
+        width: 224px;
+        height: 118px;
+    }
 
-h3.hobbies__title {
-    display: flex;
-    align-self: center;
-    font-size: 22px;
-}
+    /*Hobbies*/
 
-div.hobbies__line {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 2rem;
-    column-gap: 2rem;
-}
+    section.hobbies {
+        width: 100%;
+        max-width: 768px;
+    }
 
-div.hobbies__box {
-    width: 224px;
-    height: 118px;
-}
+    h3.hobbies__title {
+        display: flex;
+        align-self: center;
+        font-size: 22px;
+    }
 
-/*Experiências acadêmicas*/
-section.academic{
-    width: 100%;
-    max-width: 768px;
-}
+    div.hobbies__line {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
-h2.academic__title {
-    font-size: 22px;
-}
+    div.hobbies__box {
+        width: 224px;
+        height: 118px;
+    }
 
-div.academic__courses__box {
-    height: 100%;
-    width: 100%;
-}
+    /*Experiências acadêmicas*/
+    
+    h2.academic__title {
+        font-size: 22px;
+    }
+    
+    li.academic__courses__item__img {
+        height: 118px;
+        width: 224px;
+    }
+    
+    li.academic__courses__item__img img {
+        height: 58px;
+        width: 84px;
+    }
+    
+    li.academic__courses__item__title  h4 {
+        font-size: 16px;
+    }
+    
+    li.academic__courses__item__subtitle p {
+        font-size: 14px;
+    }
 
-li.academic__courses__item__img  {
-    height: 118px;
-    width: 224px;
-}
+    /*Expeirência profissional*/
 
-li.academic__courses__item__img img {
-    height: 48px;
-    max-width: 70px;
-}
+    section.experience{
+        width: 100%;
+        max-width: 768px;
+    }
 
-li.academic__courses__item__title  h4 {
-    font-size: 16px;
-}
+    h2.experience__section__title {
+        font-size: 22px;
+    }
 
-li.academic__courses__item__subtitle p {
-    font-size: 14px;
-}
+    div.experiencie__box {
+        flex-direction: column;
+        width: fit-content;
+    }
 
-/*Expeirência profissional*/
+    div.experiencie__box.b{
+        flex-direction: column;
+    }
 
-section.experience{
-    width: 100%;
-    max-width: 768px;
-}
+    div.experiencie__box .experience__img {
+        width: 704px;
+        height: 320px;
+    }
 
-h2.experience__section__title {
-    font-size: 22px;
-}
+    h2.experience__title {
+        font-size: 16px;
+    }
 
-div.experiencie__box {
-    flex-direction: column;
-    align-items: flex-start;
-}
+    h3.experience__text {
+        font-size: 14px;
+    }
 
-div.experiencie__box.b{
-    flex-direction: column;
-}
+    div.experience__info {
+        align-self: flex-start;
+    }
 
-div.experiencie__box .experience__img {
-    width: 704px;
-    height: 320px;
-}
+    /* Contato */
 
-h2.experience__title {
-    font-size: 16px;
-}
+    section.formcontato {
+        justify-content: center; 
+    }
 
-h3.experience__text {
-    font-size: 14px;
-}
+    div.formcontato__contacto {
+        justify-content: center;
+        max-width: 704px;
+    }
 
-/* Contato */
-section.formcontato {
-    max-width: 768px;
-    justify-content: center;
-}
+    div.formcontato--esquerda {
+        display: none;
+    }
 
-div.formcontato--esquerda {
-    display: none;
-}
+    div.formcontato__text {
+        width: 100%;
+    }
 
-h2.formcontato__title {
-    font-size: 22px;
-}
+    h2.formcontato__title {
+        font-size: 22px;
+    }
 
-h3.formcontato__subtext {
-    font-size: 14px;
-}
+    h3.formcontato__subtext {
+        font-size: 14px;
+    }
 
-div.formcontato__text {
-    width: 100%    
-}
-
-div.formcontato__form {
-    width: 100%;
-}
-
-/* Footer */
-section.footer{
-    font-size: 14px;
-}
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sessão sobre*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
-
-/*Experiência Profissional*/
-
- /*Contato*/
-
-/*Footer*/
+    /* Footer */
+    section.footer{
+        font-size: 14px;
+    }
 
 }

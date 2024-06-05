@@ -10,6 +10,7 @@ coloque nas sessões indicadas*/
    --pink-hightlight: #FF79D1;
    --green-hightlight: #2BAA9B;
    --placeholder-gray: #A2A2A2;
+   --red-hightlight: #D0312D;
 }
 
 body {
@@ -44,6 +45,21 @@ img {
     font-weight: normal;
     max-width: 100%; 
     height: auto;
+}
+
+input, textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .all {
@@ -421,7 +437,7 @@ div.formcontato__contacto {
 div.formcontato__text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: .5rem;
 }
 
 h2.formcontato__title {
@@ -440,16 +456,42 @@ h3.formcontato__subtext {
     font-weight: 500;
 }
 
+div.formcontato--esquerda  img{
+    align-self: center;
+    height: 100%;
+    width: auto;
+}
+
 form.formcontato__form {
     width: 100%;
     display: flex;
     flex-direction: column;   
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: .8rem;
+}
+
+fieldset.formcontato__input__container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: .5rem 1rem;
 }
 
 input.formcontato__input {
     padding: 12px 12px 24px;
     font-size: 12px;
+    background: none;
+    border: none;
+    font-color: white;
+    width: 100%;
+}
+
+.error {
+    color: var(--pink-hightlight);
+    font-size: 12px;
+    margin-top: -3px;
 }
 
 input#assunto {
@@ -461,13 +503,13 @@ textarea.formcontato__textarea {
     font-size: 16px;
     padding: 12px;
     font-family: 'Raleway';
+    background: none;
+    border: none;
 }
 
 button.formcontato__botao {
-    display: flex;
-    align-self: center;
     justify-content: flex-end;
-    width: fit-content;
+    width: 100%;
     padding: 1rem;
     background-color: var(--green-hightlight);
     color: white;

@@ -1,7 +1,6 @@
 const formFields = document.querySelectorAll("[required]");
 const form = document.querySelector(".formcontato__form");
 const submitBtn = document.querySelector(".formcontato__botao");
-console.log(submitBtn.disabled);
 
 formFields.forEach(field => {
     field.addEventListener("blur", () => inputCheck(field));
@@ -57,17 +56,14 @@ function inputCheck(field) {
 };
 
 function enableButton() {
-    console.log("Chamando enableButton");
     
     let isValid = true;
 
     formFields.forEach(field => {
         if (field.value === "" && field.hasAttribute("required")) {
             isValid = false;
-            console.log("Campo vazio detectado:", field.name);
-        }
+        };
     });
 
     submitBtn.disabled = !isValid;
-    console.log("Botão desabilitado:", submitBtn.disabled);
 };

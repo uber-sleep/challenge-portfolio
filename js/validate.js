@@ -1,5 +1,9 @@
 const formFields = document.querySelectorAll("[required]");
-const form = document.querySelector(".formcontato__form");
+const inputName = document.getElementById("nome");
+const inputEmail = document.getElementById("email");
+const inputTopic = document.getElementById("assunto");
+const inputMessage = document.getElementById("mensagem");
+
 const submitBtn = document.querySelector(".formcontato__botao");
 
 formFields.forEach(field => {
@@ -57,13 +61,12 @@ function inputCheck(field) {
 
 function enableButton() {
     
-    let isValid = true;
+    if (inputName.value.trim() === "" || inputEmail.value.trim() === "" || inputTopic.value.trim() === "" || inputMessage.value.trim() === "") {
+        submitBtn.setAttribute("disabled", "");
+        submitBtn.style.cursor = "default";
 
-    formFields.forEach(field => {
-        if (field.value === "" && field.hasAttribute("required")) {
-            isValid = false;
-        };
-    });
-
-    submitBtn.disabled = !isValid;
+    } else {
+        submitBtn.removeAttribute("disabled");
+        submitBtn.style.cursor = "pointer";
+    };
 };

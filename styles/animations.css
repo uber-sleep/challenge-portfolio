@@ -1,0 +1,104 @@
+:root {
+    --pink-hightlight: #FF79D1;
+    --green-hightlight: #2BAA9B;
+}
+
+/* SESSÃO MENU */
+
+li.menu__list__item a:hover {
+    color: var(--pink-hightlight);
+}
+
+li.menu__list__item  {
+    transition: transform 0.3s ease;
+}
+
+li.menu__list__item:hover  {
+    transform: scale(1.08);
+}
+
+#contact a:hover {
+    color: var(--green-hightlight);
+}
+
+/* SESSÃO ABOUT */
+li.title__network__item a:hover {
+    color: var(--pink-hightlight);
+}
+
+li.title__network__item  {
+    transition: transform 0.3s ease;
+}
+
+li.title__network__item:hover  {
+    transform: scale(1.08);
+}
+
+/* SESSÃO SKILLS */
+div.skills__box {
+    transition: transform 0.3s ease;
+}
+
+div.skills__box:hover {
+    transform: scale(1.1);
+}
+
+/* SESSÃO SKILLS */
+div.hobbies__box {
+    transition: transform 0.3s ease;
+}
+
+div.hobbies__box:hover {
+    transform: scale(1.1);
+}
+
+/* SESSÃO ACADÊMICA */
+ul.academic__courses__list {
+    transition: transform 0.5s ease, padding 0.5s ease;
+}
+
+ul.academic__courses__list:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: black;
+    padding:20px;
+}
+
+/* SESSÃO EXPERIÊNCIA */
+
+img.experience__img {
+    transition: transform 0.5s ease, margin 0.5s ease;   
+}
+
+img.experience__img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+}
+
+span.experience__repo, span.experience__demo {
+    transition: transform 0.3s ease;
+}
+
+span.experience__repo:hover, span.experience__demo:hover {
+    transform: scale(1.08);
+}
+
+/* SESSÃO CONTATO */
+fieldset.formcontato__input__container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+fieldset.formcontato__input__container:hover {
+    transform: scale(1.03);    
+}
+
+div.formcontato__botao__container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+}
+
+div.formcontato__botao__container:hover {
+    transform: scale(1.03);
+}
+
